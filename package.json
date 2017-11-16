@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/jaspreet36/restapis#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.4",
     "gulp-nodemon": "^2.2.1",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "mongoose": "^4.13.3"
   }
 }
