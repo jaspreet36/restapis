@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    mocha = require('gulp-mocha');
 
 gulp.task('style', function() {
     gulp.src(['*.js'])
@@ -19,4 +20,9 @@ gulp.task('default', ['style'], function() {
         .on('restart', function() {
             console.log('Restarting');
         });
+});
+
+gulp.task('test', function() {
+    gulp.src('tests/*.js', { read: false })
+        .pipe(mocha({ reporter: 'nyan' }));
 });
